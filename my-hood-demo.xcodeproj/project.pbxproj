@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B820C31C2F733900395DD2 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B820C21C2F733900395DD2 /* AddPostVC.swift */; };
+		26B820C61C2F807300395DD2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B820C51C2F807300395DD2 /* DataService.swift */; };
 		26CC2A061C2EF0C800825F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC2A051C2EF0C800825F76 /* AppDelegate.swift */; };
 		26CC2A081C2EF0C800825F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC2A071C2EF0C800825F76 /* ViewController.swift */; };
 		26CC2A0B1C2EF0C800825F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CC2A091C2EF0C800825F76 /* Main.storyboard */; };
 		26CC2A0D1C2EF0C800825F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC2A0C1C2EF0C800825F76 /* Assets.xcassets */; };
 		26CC2A101C2EF0C800825F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CC2A0E1C2EF0C800825F76 /* LaunchScreen.storyboard */; };
+		26CC2A191C2EF13400825F76 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC2A181C2EF13400825F76 /* Post.swift */; };
+		26CC2A1C1C2EFEDE00825F76 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC2A1B1C2EFEDE00825F76 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26B820C21C2F733900395DD2 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		26B820C51C2F807300395DD2 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		26CC2A021C2EF0C800825F76 /* my-hood-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-hood-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CC2A051C2EF0C800825F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CC2A071C2EF0C800825F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		26CC2A0C1C2EF0C800825F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CC2A0F1C2EF0C800825F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26CC2A111C2EF0C800825F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26CC2A181C2EF13400825F76 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		26CC2A1B1C2EFEDE00825F76 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26B820C11C2F72DE00395DD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26CC2A071C2EF0C800825F76 /* ViewController.swift */,
+				26B820C21C2F733900395DD2 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		26B820C41C2F806000395DD2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				26B820C51C2F807300395DD2 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		26CC29F91C2EF0C800825F76 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +79,33 @@
 		26CC2A041C2EF0C800825F76 /* my-hood-demo */ = {
 			isa = PBXGroup;
 			children = (
+				26B820C41C2F806000395DD2 /* Services */,
+				26CC2A171C2EF12500825F76 /* Model */,
+				26CC2A1A1C2EFEB700825F76 /* View */,
+				26B820C11C2F72DE00395DD2 /* Controller */,
 				26CC2A051C2EF0C800825F76 /* AppDelegate.swift */,
-				26CC2A071C2EF0C800825F76 /* ViewController.swift */,
-				26CC2A091C2EF0C800825F76 /* Main.storyboard */,
 				26CC2A0C1C2EF0C800825F76 /* Assets.xcassets */,
-				26CC2A0E1C2EF0C800825F76 /* LaunchScreen.storyboard */,
 				26CC2A111C2EF0C800825F76 /* Info.plist */,
 			);
 			path = "my-hood-demo";
+			sourceTree = "<group>";
+		};
+		26CC2A171C2EF12500825F76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26CC2A181C2EF13400825F76 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		26CC2A1A1C2EFEB700825F76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26CC2A0E1C2EF0C800825F76 /* LaunchScreen.storyboard */,
+				26CC2A091C2EF0C800825F76 /* Main.storyboard */,
+				26CC2A1B1C2EFEDE00825F76 /* PostCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CC2A191C2EF13400825F76 /* Post.swift in Sources */,
 				26CC2A081C2EF0C800825F76 /* ViewController.swift in Sources */,
+				26B820C31C2F733900395DD2 /* AddPostVC.swift in Sources */,
+				26B820C61C2F807300395DD2 /* DataService.swift in Sources */,
 				26CC2A061C2EF0C800825F76 /* AppDelegate.swift in Sources */,
+				26CC2A1C1C2EFEDE00825F76 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +334,7 @@
 				26CC2A161C2EF0C800825F76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
